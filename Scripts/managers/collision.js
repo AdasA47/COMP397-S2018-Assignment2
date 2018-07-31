@@ -7,8 +7,8 @@ var managers;
             var P1 = new math.Vec2(object1.x, object1.y);
             var P2 = new math.Vec2(object2.x, object2.y);
             if (math.Vec2.Distance(P1, P2) < (object1.halfWidth + object2.halfWidth) && math.Vec2.Distance(P1, P2) < (object1.halfHeight + object2.halfHeight)) {
-                console.log("Collision!");
                 if (!object2.isColliding) {
+                    console.log("Collision with " + object2.name);
                     object2.isColliding = true;
                     switch (object2.name) {
                         case "dragonball":
