@@ -8,6 +8,7 @@ module scenes {
         private _asteroid2 : objects.Asteroid2;
         private _asteroid3 : objects.Asteroid3;
         private _backgroundMusic : createjs.AbstractSoundInstance;
+        private _scoreboard: managers.ScoreBoard;
         
         // constructors
         constructor() {
@@ -30,6 +31,9 @@ module scenes {
             this._backgroundMusic = createjs.Sound.play("backgroundMusic");
             this._backgroundMusic.loop = -1;
             this._backgroundMusic.volume = 0.1;
+
+            this._scoreboard = new managers.ScoreBoard();
+            managers.Game.ScoreBoard = this._scoreboard;
             this.Main();
         }
 
@@ -55,6 +59,7 @@ module scenes {
         }
 
         public Destroy():void {
+            this._backgroundMusic.stop();
             this.removeAllChildren();
         }
 
@@ -69,6 +74,9 @@ module scenes {
             this.addChild(this._asteroid);
             this.addChild(this._asteroid2);
             this.addChild(this._asteroid3);
+
+            this.addChild(this._scoreboard.LivesLabel);
+            this.addChild(this._scoreboard.ScoreLabel);
         }
     }
 }
