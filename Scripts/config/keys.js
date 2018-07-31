@@ -3,6 +3,12 @@ var config;
     var Keys = /** @class */ (function () {
         function Keys() {
         }
+        /**
+         * @author Adithya Dasarapu 300931870
+         * @class Keys
+         *
+         *
+         */
         //arrow keys
         Keys.LEFT_ARROW = 37;
         Keys.RIGHT_ARROW = 39;

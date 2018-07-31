@@ -1,6 +1,13 @@
 module managers{
     export class Keyboard{
-        //public instance variables
+
+        
+        /**
+         * @author Adithya Dasarapu - 300931870
+         * @description Keyboard Manager binding
+         * @type {boolean}
+         * @memberof Keyboard
+         */
         public moveUp:boolean;
         public moveDown:boolean;
         public jump:boolean;

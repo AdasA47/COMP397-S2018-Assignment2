@@ -1,5 +1,13 @@
 module scenes {
     export class Ins extends objects.Scene {
+
+        /**
+         * @author Adithya Dasarapu - 300931870
+         * @description Instructions scene with sounds
+         *
+         * 
+         * @memberof Ins
+         */
         // member variables
         
         private _instructionsLabel1: objects.Label;

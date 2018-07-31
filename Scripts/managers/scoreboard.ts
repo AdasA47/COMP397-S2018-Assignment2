@@ -1,6 +1,15 @@
 module managers {
     export class ScoreBoard {
-        // private member variables
+
+        
+        /**
+         * @author Adithya Dasarapu - 300931870
+         * @description Scoreboard Manager for maintaining scores
+         *
+         * @private
+         * @type {number}
+         * @memberof ScoreBoard
+         */
         private _lives:number;
         private _score:number;
         private _highScore:number;

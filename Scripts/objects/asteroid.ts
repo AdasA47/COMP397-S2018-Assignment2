@@ -1,7 +1,16 @@
 module objects {
     export class Asteroid extends objects.GameObject {
 
-        //private variables
+        
+
+        /**
+         * @author Adithya Dasarapu - 300931870
+         * @description Asteroid Object
+         *
+         * @private
+         * @type {number}
+         * @memberof Asteroid
+         */
         private _horizontalSpeed:number;
         private _verticalSpeed:number;
         

@@ -1,6 +1,14 @@
 module config{
     export class Keys {
-        //arrow keys
+        
+        /**
+         *
+         * @author Adithya Dasarapu 300931870
+         * @static
+         * @description Keycodes for Keyboard movement
+         * @type {number}
+         * @memberof Keys
+         */
         public static LEFT_ARROW: number = 37;
         public static RIGHT_ARROW: number = 39;
         public static DOWN_ARROW: number = 40;

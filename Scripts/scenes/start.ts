@@ -1,5 +1,13 @@
 module scenes {
     export class Start extends objects.Scene {
+
+        /**
+         * @author Adithya Dasarapu - 300931870
+         * @description Start scene with sounds
+         *
+         * 
+         * @memberof Start
+         */
         // member variables
         private _welcomeLabel: objects.Label;
         private _startButton: objects.Button;

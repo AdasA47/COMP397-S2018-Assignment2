@@ -1,5 +1,14 @@
 module scenes {
     export class Play extends objects.Scene {
+
+        /**
+         * @author Adithya Dasarapu - 300931870
+         * @description PLay scene with sounds
+         *
+         * 
+         * @memberof Play
+         */
+        
         // member variables
         private _scenary : objects.Scenary;
         private _goku : objects.Goku;

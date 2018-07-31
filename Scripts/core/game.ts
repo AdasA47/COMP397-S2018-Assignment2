@@ -1,6 +1,14 @@
 //IIFE -- Immediately Invoked Function Expression
 // also called self executing anonymous function
 (function(){
+
+    /** 
+     * @author Adithya Dasarapu 300931870
+     * @description Preloads all assets and responsible for switching scenes -FSM
+     * @memberOf game.ts
+     * IIFE
+     * module Core 
+    */
     // Game Variables
     let canvas:HTMLCanvasElement;
     let stage:createjs.Stage;

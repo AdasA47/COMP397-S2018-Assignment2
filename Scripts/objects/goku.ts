@@ -1,9 +1,13 @@
 module objects {
     export class Goku extends objects.GameObject {
+        
 
         //private variables
 
-        //Constructor
+        /** @author Adithya Dasarapu - 300931870
+         * @description Creates an instance of Goku, the character.
+         * @memberof Goku
+         */
         constructor() {
             super("goku");
 

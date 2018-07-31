@@ -1,6 +1,14 @@
 module objects {
     export class Button extends objects.GameObject {
-        // member variables
+
+        
+        /**
+         * @author Adithya Dasarapu - 300931870
+         * @description Button Object
+         *
+         * @type {boolean}
+         * @memberof Button
+         */
         public isCentered:boolean;
 
         // constructors

@@ -1,8 +1,14 @@
 module math {
     export class Vec2 extends createjs.Point {
+        
         // member variables
 
-        // constructors
+        /**@author Adithya Dasarapu - 300931870
+         * @description Creates an instance of Vec2.
+         * @param {number} [x=0]
+         * @param {number} [y=0]
+         * @memberof Vec2
+         */
         constructor(x:number = 0, y:number = 0) {
             super(x, y);
         }

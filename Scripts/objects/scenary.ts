@@ -1,7 +1,15 @@
 module objects{
     export class Scenary extends createjs.Bitmap{
+        
 
-        //private variables
+        /**
+         * @author Adithya Dasarapu - 300931870
+         * @description Background Scenary Object
+         *
+         * @private
+         * @type {number}
+         * @memberof Scenary
+         */
         private _horizontalSpeed :number;
 
         //Constructor

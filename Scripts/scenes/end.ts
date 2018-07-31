@@ -1,6 +1,18 @@
 module scenes {
     export class End extends objects.Scene {
-        // member variables
+
+        
+
+        
+        /**
+         * @author Adithya Dasarapu - 300931870
+         * @description End scene with sounds
+         *
+         * 
+         * @memberof End
+         */
+
+         //member variables
         private _endLabel: objects.Label;
         private _playAgainButton: objects.Button;
         private _exitToMenuButton: objects.Button;

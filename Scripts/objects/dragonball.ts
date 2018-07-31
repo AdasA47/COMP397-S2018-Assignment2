@@ -1,7 +1,15 @@
 module objects {
     export class Dragonball extends objects.GameObject {
+        
 
-        //private variables
+        /**
+         * @author Adithya Dasarapu - 300931870
+         * @description Dragonball Object
+         *
+         * @private
+         * @type {number}
+         * @memberof Dragonball
+         */
         private _horizontalSpeed:number;
 
         //Constructor
