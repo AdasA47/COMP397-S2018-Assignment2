@@ -24,12 +24,14 @@ var scenes;
             this._scenary = new objects.Scenary();
             this._goku = new objects.Goku();
             this._dragonBall = new objects.Dragonball();
+            this._asteroid = new objects.Asteroid();
             this.Main();
         };
         Play.prototype.Update = function () {
             this._scenary.Update();
             this._goku.Update();
             this._dragonBall.Update();
+            this._asteroid.Update();
         };
         Play.prototype.Reset = function () {
         };
@@ -41,6 +43,7 @@ var scenes;
             this.addChild(this._scenary);
             this.addChild(this._dragonBall);
             this.addChild(this._goku);
+            this.addChild(this._asteroid);
         };
         return Play;
     }(objects.Scene));

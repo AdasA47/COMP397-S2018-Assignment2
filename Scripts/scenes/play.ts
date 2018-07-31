@@ -4,6 +4,7 @@ module scenes {
         private _scenary : objects.Scenary;
         private _goku : objects.Goku;
         private _dragonBall : objects.Dragonball;
+        private _asteroid : objects.Asteroid;
         
         // constructors
         constructor() {
@@ -19,6 +20,7 @@ module scenes {
             this._scenary = new objects.Scenary();
             this._goku = new objects.Goku();
             this._dragonBall = new objects.Dragonball();
+            this._asteroid = new objects.Asteroid();
             this.Main();
         }
 
@@ -26,6 +28,7 @@ module scenes {
             this._scenary.Update();
             this._goku.Update();
             this._dragonBall.Update();
+            this._asteroid.Update();
         }
 
         public Reset():void {
@@ -44,7 +47,7 @@ module scenes {
             
             this.addChild(this._goku);
             
-        
+            this.addChild(this._asteroid);
         }
     }
 }

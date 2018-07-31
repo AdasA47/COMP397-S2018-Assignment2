@@ -15,7 +15,7 @@
         {id: "scenary", src:"/Assets/images/bg0.png"},
         {id: "goku", src:"/Assets/images/gokuTransparant.png"},
         {id: "dragonball", src:"/Assets/images/6stardragonball.png"},
-        //{id: "asteroid", src:"/Assets/images/asteroid1.png"}
+        {id: "asteroid", src:"/Assets/images/asteroid1.png"}
     ]
 
 
