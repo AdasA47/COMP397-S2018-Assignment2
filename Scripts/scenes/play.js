@@ -25,6 +25,8 @@ var scenes;
             this._goku = new objects.Goku();
             this._dragonBall = new objects.Dragonball();
             this._asteroid = new objects.Asteroid();
+            this._asteroid2 = new objects.Asteroid2();
+            this._asteroid3 = new objects.Asteroid3();
             this.Main();
         };
         Play.prototype.Update = function () {
@@ -32,6 +34,8 @@ var scenes;
             this._goku.Update();
             this._dragonBall.Update();
             this._asteroid.Update();
+            this._asteroid2.Update();
+            this._asteroid3.Update();
         };
         Play.prototype.Reset = function () {
         };
@@ -44,6 +48,8 @@ var scenes;
             this.addChild(this._dragonBall);
             this.addChild(this._goku);
             this.addChild(this._asteroid);
+            this.addChild(this._asteroid2);
+            this.addChild(this._asteroid3);
         };
         return Play;
     }(objects.Scene));
