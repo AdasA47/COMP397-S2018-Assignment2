@@ -7,6 +7,7 @@ module scenes {
         private _asteroid : objects.Asteroid;
         private _asteroid2 : objects.Asteroid2;
         private _asteroid3 : objects.Asteroid3;
+        private _backgroundMusic : createjs.AbstractSoundInstance;
         
         // constructors
         constructor() {
@@ -25,6 +26,10 @@ module scenes {
             this._asteroid = new objects.Asteroid();
             this._asteroid2 = new objects.Asteroid2();
             this._asteroid3 = new objects.Asteroid3();
+            
+            this._backgroundMusic = createjs.Sound.play("backgroundMusic");
+            this._backgroundMusic.loop = -1;
+            this._backgroundMusic.volume = 0.1;
             this.Main();
         }
 
@@ -32,9 +37,16 @@ module scenes {
             this._scenary.Update();
             this._goku.Update();
             this._dragonBall.Update();
+
+            managers.Collision.Check(this._goku,this._dragonBall);
+
             this._asteroid.Update();
             this._asteroid2.Update();
             this._asteroid3.Update();
+
+            managers.Collision.Check(this._goku,this._asteroid);
+            managers.Collision.Check(this._goku,this._asteroid2);
+            managers.Collision.Check(this._goku,this._asteroid3);
             
         }
 

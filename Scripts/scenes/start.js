@@ -23,6 +23,8 @@ var scenes;
         Start.prototype.Start = function () {
             this._welcomeLabel = new objects.Label("Welcome!", "60px", "Consolas", "#000000", 320, 240, true);
             this._startButton = new objects.Button("StartButton", 320, 360, true);
+            this._backgroundMusic = createjs.Sound.play("welcome");
+            this._backgroundMusic.volume = 0.5;
             this.Main();
         };
         Start.prototype.Update = function () {

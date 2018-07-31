@@ -5,6 +5,7 @@ module objects {
         public height:number;
         public halfWidth:number;
         public halfHeight:number;
+        public isColliding:boolean;
 
         // constructors
         constructor(imagePath) {
@@ -23,6 +24,7 @@ module objects {
             this.halfHeight = this.height * 0.5;
             this.regX = this.halfWidth;
             this.regY = this.halfHeight;
+            this.isColliding = false;
         }
 
         // public methods

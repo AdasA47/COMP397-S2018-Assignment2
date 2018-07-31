@@ -23,6 +23,8 @@ var scenes;
         End.prototype.Start = function () {
             this._endLabel = new objects.Label("Game Over!", "60px", "Consolas", "#000000", 320, 240, true);
             this._backButton = new objects.Button("BackButton", 320, 360, true);
+            this._backgroundMusic = createjs.Sound.play("hurtYourFeelings");
+            this._backgroundMusic.volume = 0.5;
             this.Main();
         };
         End.prototype.Update = function () {

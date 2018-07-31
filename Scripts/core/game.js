@@ -16,7 +16,14 @@
         { id: "dragonball", src: "/Assets/images/6stardragonball.png" },
         { id: "asteroid", src: "/Assets/images/asteroid1.png" },
         { id: "asteroid2", src: "/Assets/images/asteroid2.png" },
-        { id: "asteroid3", src: "/Assets/images/asteroid3.png" }
+        { id: "asteroid3", src: "/Assets/images/asteroid3.png" },
+        { id: "reflect", src: "/Assets/audio/reflect.wav" },
+        { id: "candypop", src: "/Assets/audio/candypop.wav" },
+        { id: "backgroundMusic", src: "/Assets/audio/Attack-of-the-Flaming-Pie-Tins.mp3" },
+        { id: "weakpunch", src: "/Assets/audio/weakpunch.wav" },
+        { id: "strongpunch", src: "/Assets/audio/strongpunch.wav" },
+        { id: "hurtYourFeelings", src: "/Assets/audio/Hurt-your-feelings.mp3" },
+        { id: "welcome", src: "/Assets/audio/welcome.mp3" }
     ];
     function Init() {
         console.log("%c Assets Loading...", "font-weight:bold; font-size:20px; color: green;");
