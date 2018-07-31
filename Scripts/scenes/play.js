@@ -12,6 +12,7 @@ var scenes;
 (function (scenes) {
     var Play = /** @class */ (function (_super) {
         __extends(Play, _super);
+        // member variables
         // constructors
         function Play() {
             var _this = _super.call(this) || this;
@@ -21,8 +22,6 @@ var scenes;
         // private methods
         // public methods
         Play.prototype.Start = function () {
-            this._playLabel = new objects.Label("Play!", "60px", "Consolas", "#000000", 320, 240, true);
-            this._nextButton = new objects.Button("NextButton", 320, 360, true);
             this.Main();
         };
         Play.prototype.Update = function () {
@@ -33,11 +32,6 @@ var scenes;
             this.removeAllChildren();
         };
         Play.prototype.Main = function () {
-            this.addChild(this._playLabel);
-            this.addChild(this._nextButton);
-            this._nextButton.on("click", function () {
-                managers.Game.CurrentState = config.Scene.END;
-            }, this);
         };
         return Play;
     }(objects.Scene));
