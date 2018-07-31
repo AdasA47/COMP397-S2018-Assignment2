@@ -21,7 +21,7 @@ var objects;
         //private methods
         //public methods
         Asteroid2.prototype.Start = function () {
-            this._horizontalSpeed = 5 + (Math.random() * 2);
+            this._horizontalSpeed = 4 + (Math.random() * 2);
             this.Reset();
         };
         Asteroid2.prototype.Update = function () {
@@ -30,7 +30,7 @@ var objects;
             this.CheckBounds();
         };
         Asteroid2.prototype.Reset = function () {
-            this._horizontalSpeed = (Math.random() * 2) + 5;
+            this._horizontalSpeed = (Math.random() * 2) + 4;
             this._verticalSpeed = (Math.random() * 4) - 2;
             this.y = Math.floor((Math.random() * (480 - this.height)) + this.halfHeight);
             this.x = 640 + this.halfWidth;

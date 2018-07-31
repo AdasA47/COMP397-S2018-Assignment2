@@ -21,7 +21,7 @@ var objects;
         //private methods
         //public methods
         Dragonball.prototype.Start = function () {
-            this._horizontalSpeed = 5 + (Math.random() * 2);
+            this._horizontalSpeed = 4 + (Math.random() * 2);
             this.Reset();
         };
         Dragonball.prototype.Update = function () {
@@ -29,7 +29,7 @@ var objects;
             this.CheckBounds();
         };
         Dragonball.prototype.Reset = function () {
-            this._horizontalSpeed = 5 + (Math.random() * 2);
+            this._horizontalSpeed = 4 + (Math.random() * 2);
             this.y = Math.floor((Math.random() * (480 - this.height)) + this.halfHeight);
             this.x = 640 + this.halfWidth;
         };

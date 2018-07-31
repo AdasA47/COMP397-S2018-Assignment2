@@ -7,6 +7,7 @@
     let AssetManager: createjs.LoadQueue;
     let CurrentScene: objects.Scene;
     let CurrentState: config.Scene;
+    let keyboardManager: managers.Keyboard; 
 
     let Manifest = [
         {id: "StartButton", src:"/Assets/images/StartButton.png"},
@@ -45,11 +46,12 @@
         createjs.Ticker.framerate = 60; // sets framerate to 60fps
         createjs.Ticker.on("tick", Update);
         
-
-        
         managers.Game.Stage = stage;
         CurrentState = config.Scene.START;
         managers.Game.CurrentState = CurrentState;
+
+        keyboardManager = new managers.Keyboard();
+        managers.Game.KeyboardManager = keyboardManager;
 
         // This is where all the magic happens
         Main();
