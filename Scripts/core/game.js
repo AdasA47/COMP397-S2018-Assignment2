@@ -10,15 +10,17 @@
     var Manifest = [
         { id: "StartButton", src: "/Assets/images/StartButton.png" },
         { id: "NextButton", src: "/Assets/images/NextButton.png" },
-        { id: "BackButton", src: "/Assets/images/BackButton.png" }
+        { id: "BackButton", src: "/Assets/images/BackButton.png" },
+        { id: "scenary", src: "/Assets/images/bg0.png" },
+        { id: "goku", src: "/Assets/images/gokuTransparant.png" }
     ];
     function Init() {
         console.log("%c Assets Loading...", "font-weight:bold; font-size:20px; color: green;");
         AssetManager = new createjs.LoadQueue();
         managers.Game.AssetManager = AssetManager; // set as single instance of the LoadQueue object
         AssetManager.installPlugin(createjs.Sound); // enables sound file preloading
-        AssetManager.on("complete", Start);
         AssetManager.loadManifest(Manifest);
+        AssetManager.on("complete", Start, this);
     }
     function Start() {
         console.log("%c Game Initializing...", "font-weight:bold; font-size:20px; color: red;");

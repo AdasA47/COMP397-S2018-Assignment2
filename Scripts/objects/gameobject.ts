@@ -11,8 +11,6 @@ module objects {
             super(managers.Game.AssetManager.getResult(imagePath));
 
             this._initialize();
-
-
         }
 
         // private methods

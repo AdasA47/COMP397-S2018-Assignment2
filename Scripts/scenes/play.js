@@ -12,7 +12,6 @@ var scenes;
 (function (scenes) {
     var Play = /** @class */ (function (_super) {
         __extends(Play, _super);
-        // member variables
         // constructors
         function Play() {
             var _this = _super.call(this) || this;
@@ -22,9 +21,11 @@ var scenes;
         // private methods
         // public methods
         Play.prototype.Start = function () {
+            this._scenary = new objects.Scenary();
             this.Main();
         };
         Play.prototype.Update = function () {
+            this._scenary.Update();
         };
         Play.prototype.Reset = function () {
         };
@@ -32,6 +33,8 @@ var scenes;
             this.removeAllChildren();
         };
         Play.prototype.Main = function () {
+            //add scenary to the scene
+            this.addChild(this._scenary);
         };
         return Play;
     }(objects.Scene));
