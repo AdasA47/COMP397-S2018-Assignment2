@@ -46,7 +46,7 @@ var scenes;
             this.addChild(this._scenary);
             this.addChild(this._endLabel);
             //this.addChild(this._highScoreLabel);
-            this.addChild(managers.Game.ScoreBoard.HighScoreLabel);
+            this.addChild(managers.Game.ScoreBoard.ScoreLabel);
             this.addChild(this._playAgainButton);
             this.addChild(this._exitToMenuButton);
             this._playAgainButton.on("click", function () {
