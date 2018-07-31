@@ -3,6 +3,7 @@ module scenes {
         // member variables
         private _scenary : objects.Scenary;
         private _goku : objects.Goku;
+        private _dragonBall : objects.Dragonball;
         
         // constructors
         constructor() {
@@ -16,13 +17,15 @@ module scenes {
         // public methods
         public Start():void {
             this._scenary = new objects.Scenary();
-            this._goku =new objects.Goku();
+            this._goku = new objects.Goku();
+            this._dragonBall = new objects.Dragonball();
             this.Main();
         }
 
         public Update():void {
             this._scenary.Update();
             this._goku.Update();
+            this._dragonBall.Update();
         }
 
         public Reset():void {
@@ -36,7 +39,11 @@ module scenes {
         public Main():void {
             //add scenary to the scene
             this.addChild(this._scenary);
+
+            this.addChild(this._dragonBall);
+            
             this.addChild(this._goku);
+            
         
         }
     }

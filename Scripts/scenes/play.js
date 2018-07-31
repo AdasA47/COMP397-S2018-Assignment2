@@ -23,11 +23,13 @@ var scenes;
         Play.prototype.Start = function () {
             this._scenary = new objects.Scenary();
             this._goku = new objects.Goku();
+            this._dragonBall = new objects.Dragonball();
             this.Main();
         };
         Play.prototype.Update = function () {
             this._scenary.Update();
             this._goku.Update();
+            this._dragonBall.Update();
         };
         Play.prototype.Reset = function () {
         };
@@ -37,6 +39,7 @@ var scenes;
         Play.prototype.Main = function () {
             //add scenary to the scene
             this.addChild(this._scenary);
+            this.addChild(this._dragonBall);
             this.addChild(this._goku);
         };
         return Play;

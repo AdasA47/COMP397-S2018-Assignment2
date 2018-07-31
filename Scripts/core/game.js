@@ -12,7 +12,8 @@
         { id: "NextButton", src: "/Assets/images/NextButton.png" },
         { id: "BackButton", src: "/Assets/images/BackButton.png" },
         { id: "scenary", src: "/Assets/images/bg0.png" },
-        { id: "goku", src: "/Assets/images/gokuTransparant.png" }
+        { id: "goku", src: "/Assets/images/gokuTransparant.png" },
+        { id: "dragonball", src: "/Assets/images/6stardragonball.png" },
     ];
     function Init() {
         console.log("%c Assets Loading...", "font-weight:bold; font-size:20px; color: green;");
