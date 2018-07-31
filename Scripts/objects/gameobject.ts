@@ -9,7 +9,7 @@ module objects {
         // constructors
         constructor(imagePath) {
             super(managers.Game.AssetManager.getResult(imagePath));
-
+            //this.name = imagePath;
             this._initialize();
         }
 
@@ -21,6 +21,8 @@ module objects {
             this.height = this.getBounds().height;
             this.halfWidth = this.width * 0.5;
             this.halfHeight = this.height * 0.5;
+            this.regX = this.halfWidth;
+            this.regY = this.halfHeight;
         }
 
         // public methods

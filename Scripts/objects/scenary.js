@@ -20,7 +20,7 @@ var objects;
         }
         //private methods
         Scenary.prototype._checkBounds = function () {
-            if (this.x <= -1024) {
+            if (this.x <= -1280) {
                 this.Reset();
             }
         };

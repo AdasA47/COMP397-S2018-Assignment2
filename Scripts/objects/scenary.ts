@@ -14,7 +14,7 @@ module objects{
         //private methods
 
         private _checkBounds():void{
-            if(this.x <= -1024){
+            if(this.x <= -1280){
                 this.Reset();
             }
         }

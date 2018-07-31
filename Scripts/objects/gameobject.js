@@ -15,6 +15,7 @@ var objects;
         // constructors
         function GameObject(imagePath) {
             var _this = _super.call(this, managers.Game.AssetManager.getResult(imagePath)) || this;
+            //this.name = imagePath;
             _this._initialize();
             return _this;
         }
@@ -24,6 +25,8 @@ var objects;
             this.height = this.getBounds().height;
             this.halfWidth = this.width * 0.5;
             this.halfHeight = this.height * 0.5;
+            this.regX = this.halfWidth;
+            this.regY = this.halfHeight;
         };
         // public methods
         GameObject.prototype.Start = function () {
