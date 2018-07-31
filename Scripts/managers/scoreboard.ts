@@ -80,6 +80,7 @@ module managers {
         
         // constructors
         constructor() {
+            
             this.Start();
         }
 

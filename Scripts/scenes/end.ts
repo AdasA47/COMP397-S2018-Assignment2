@@ -2,7 +2,10 @@ module scenes {
     export class End extends objects.Scene {
         // member variables
         private _endLabel: objects.Label;
-        private _backButton: objects.Button;
+        private _playAgainButton: objects.Button;
+        private _exitToMenuButton: objects.Button;
+        private _highScoreLabel : objects.Label;
+        private _scenary: objects.Scenary;
 
         private _backgroundMusic : createjs.AbstractSoundInstance;
 
@@ -18,8 +21,16 @@ module scenes {
         // public methods
         public Start():void {
 
-            this._endLabel = new objects.Label("Game Over!", "60px", "Consolas", "#000000", 320, 240, true);
-            this._backButton = new objects.Button("BackButton", 320, 360, true);
+            this._scenary = new objects.Scenary();
+
+            this._endLabel = new objects.Label("Game Over!", "50px", "Consolas", "#FFFFFF", 320, 100, true);
+            // this._highScoreLabel = managers.Game.ScoreBoard.HighScoreLabel;
+            // this._highScoreLabel.x = 320;
+            // this._highScoreLabel.y = 200;
+            // this._highScoreLabel.isCentered =true;
+            // this._highScoreLabel.font = "40px Consolas";
+            this._playAgainButton = new objects.Button("PlayAgainButton", 150, 400, true);
+            this._exitToMenuButton = new objects.Button("ExitToMenuButton", 450, 400, true);
             
             this._backgroundMusic = createjs.Sound.play("hurtYourFeelings");
             this._backgroundMusic.volume = 0.5;
@@ -27,7 +38,7 @@ module scenes {
         }
 
         public Update():void {
-
+            this._scenary.Update();
         }
 
         public Reset():void {
@@ -39,11 +50,19 @@ module scenes {
         }
 
         public Main():void {
-            this.addChild(this._endLabel);
-            this.addChild(this._backButton);
 
-            this._backButton.on("click", function(){
+            this.addChild(this._scenary);
+            this.addChild(this._endLabel);
+            //this.addChild(this._highScoreLabel);
+            this.addChild(managers.Game.ScoreBoard.HighScoreLabel);
+            this.addChild(this._playAgainButton);
+            this.addChild(this._exitToMenuButton);
+
+            this._playAgainButton.on("click", function(){
                 managers.Game.CurrentState = config.Scene.PLAY;
+            }, this);
+            this._exitToMenuButton.on("click", function(){
+                managers.Game.CurrentState = config.Scene.START;
             }, this);
         }
     }

@@ -9,9 +9,12 @@
     var CurrentState;
     var keyboardManager;
     var Manifest = [
-        { id: "StartButton", src: "/Assets/images/StartButton.png" },
-        { id: "NextButton", src: "/Assets/images/NextButton.png" },
-        { id: "BackButton", src: "/Assets/images/BackButton.png" },
+        { id: "StartButton", src: "/Assets/images/button_play.png" },
+        { id: "ExitButton", src: "/Assets/images/button_exit.png" },
+        { id: "InstructionsButton", src: "/Assets/images/button_instructions.png" },
+        { id: "PlayAgainButton", src: "/Assets/images/button_play-again.png" },
+        { id: "ExitToMenuButton", src: "/Assets/images/button_exit-to-menu.png" },
+        { id: "BackButton", src: "/Assets/images/button_back.png" },
         { id: "scenary", src: "/Assets/images/bg0.png" },
         { id: "goku", src: "/Assets/images/gokuTransparant.png" },
         { id: "dragonball", src: "/Assets/images/6stardragonball.png" },
@@ -24,7 +27,9 @@
         { id: "weakpunch", src: "/Assets/audio/weakpunch.wav" },
         { id: "strongpunch", src: "/Assets/audio/strongpunch.wav" },
         { id: "hurtYourFeelings", src: "/Assets/audio/Hurt-your-feelings.mp3" },
-        { id: "welcome", src: "/Assets/audio/welcome.mp3" }
+        { id: "steamtech", src: "/Assets/audio/Steamtech-Mayhem.mp3" },
+        { id: "welcome", src: "/Assets/audio/welcome.mp3" },
+        { id: "cyberpunk", src: "/Assets/audio/Cyberpunk-City.mp3" }
     ];
     function Init() {
         console.log("%c Assets Loading...", "font-weight:bold; font-size:20px; color: green;");
@@ -66,6 +71,9 @@
         switch (CurrentState) {
             case config.Scene.START:
                 CurrentScene = new scenes.Start();
+                break;
+            case config.Scene.INS:
+                CurrentScene = new scenes.Ins();
                 break;
             case config.Scene.PLAY:
                 CurrentScene = new scenes.Play();
