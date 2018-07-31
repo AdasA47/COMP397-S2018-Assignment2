@@ -9,7 +9,7 @@ module objects {
         // constructors
         constructor(imagePath) {
             super(managers.Game.AssetManager.getResult(imagePath));
-            //this.name = imagePath;
+            this.name = imagePath;
             this._initialize();
         }
 

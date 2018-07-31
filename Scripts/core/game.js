@@ -29,6 +29,7 @@
         stage.enableMouseOver(20); // enables mouse over events
         createjs.Ticker.framerate = 60; // sets framerate to 60fps
         createjs.Ticker.on("tick", Update);
+        managers.Game.Stage = stage;
         CurrentState = config.Scene.START;
         managers.Game.CurrentState = CurrentState;
         // This is where all the magic happens

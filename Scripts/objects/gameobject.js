@@ -15,7 +15,7 @@ var objects;
         // constructors
         function GameObject(imagePath) {
             var _this = _super.call(this, managers.Game.AssetManager.getResult(imagePath)) || this;
-            //this.name = imagePath;
+            _this.name = imagePath;
             _this._initialize();
             return _this;
         }
